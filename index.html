@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="author" content="Matvii K."/>
+  <title>Event Driven Loot Collector</title>
+  <style>
+    :root{font-family: Helvetica; color:#382e28; font-size:18px}
+
+    body{max-width:800px; margin:36px auto; padding:18px; background:#D5D394; border-radius:8px}
+    h1{font-size:1.5rem; margin-left:12px}
+    .wrapper{background:#C5B265; padding:15px; margin-top:12px; border-radius:6px; box-shadow:0 1px 0 rgba(0,0,0,0.05)}
+    .row{display:flex; gap:10px; align-items: center; margin-bottom:12px}
+    label{width:50px; margin-left:5px}
+
+    input{flex:1; padding:8px; border:1px solid #B09E2A; background:#ffffff; border-radius:4px}
+    button{margin: auto;padding:10px 12px;background:#2b64ff; color:#ffffff; border:none; border-radius:15px;
+         cursor:pointer; box-shadow:0 1px 0 rgba(0,0,0,0.05);}
+    #messages{padding-top:12px;color:#fffcee}
+
+    span{color:#2c241f; font-weight:600; margin-left:auto}
+    #lootList{margin-top:12px}
+    .lootItem{border-bottom:1px solid #dfd3a3; padding:0 0 10px;}
+  </style>
+</head>
+<body>
+  <h1>Loot Collector</h1>
+
+  <div class="wrapper" style="padding-top:30px">
+    <div class="row">
+      <label for="lootName">Name</label>
+      <input id="lootName" type="text">
+    </div>
+
+    <div class="row">
+      <label for="lootValue">Value</label>
+      <input id="lootValue" type="number" step="0.01">
+    </div>
+
+    <div class="row">
+      <button id="addLootBtn">Add Loot</button>
+    </div>
+
+    <p id="messages"></p>
+    
+  </div>
+  <h2 >Collected Loot</h2>
+  <div class="wrapper">
+        <div id="lootList"></div>
+        <p id="totalValue">Total loot value: 0</p>
+    </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
